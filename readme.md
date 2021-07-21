@@ -15,3 +15,6 @@
 <h4>Use: Java, Spring Boot / WebMVC / Data / Gradle / Swagger UI / Docker</h4>
 <h4>Deploy with docker-compose</h4>
 <h4>Code in public Github / Gitlab repo</h4>
+<hr>
+<h1>Swagger-ui link:</h1>
+<p>http://localhost:8080/swagger-ui.html</p>
