@@ -1,4 +1,4 @@
-package com.obpam.controllers;
+package com.obpam;
 
 import com.obpam.errors.InvalidTransactionException;
 import org.hibernate.exception.ConstraintViolationException;

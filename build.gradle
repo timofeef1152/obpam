@@ -19,6 +19,10 @@ dependencies {
 	implementation 'org.projectlombok:lombok:1.18.16'
 	implementation 'org.postgresql:postgresql:42.1.4'
 	implementation 'org.modelmapper:modelmapper:2.4.4'
+
+	implementation 'io.swagger.core.v3:swagger-annotations:2.1.10'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.5.9'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	annotationProcessor 'org.projectlombok:lombok:1.18.16'

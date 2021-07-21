@@ -1,5 +1,6 @@
 package com.obpam.dtos;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.obpam.models.TransactionType;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,6 +12,7 @@ import javax.validation.constraints.Null;
 @Getter
 @Setter
 public class TransactionDto {
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     @Null(message = "Id must be null")
     private Long id;
     @NotNull(message = "Type couldn't be null")

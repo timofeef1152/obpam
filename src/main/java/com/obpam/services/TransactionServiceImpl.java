@@ -68,7 +68,7 @@ public class TransactionServiceImpl implements TransactionService {
         return transaction;
     }
 
-    private void validateUserAndAccount(long userId, long accountId) {
+    private void validateUserAndAccount(long userId, long accountId) throws EntityNotFoundException {
         if (!userRepository.existsById(userId)) {
             throw new EntityNotFoundException(USER_DOES_NOT_EXIST);
         }
@@ -81,7 +81,7 @@ public class TransactionServiceImpl implements TransactionService {
         return oldValue + (transaction.getType().getSign() * transaction.getAmount());
     }
 
-    private void validateTransaction(long calculatedBalance) {
+    private void validateTransaction(long calculatedBalance) throws InvalidTransactionException {
         if (calculatedBalance < 0) {
             throw new InvalidTransactionException(INSUFFICIENT_FUNDS);
         }

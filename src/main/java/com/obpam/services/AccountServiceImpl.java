@@ -85,7 +85,7 @@ public class AccountServiceImpl implements AccountService {
         userRepository.save(user);
     }
 
-    private void validateUser(long userId) {
+    private void validateUser(long userId) throws EntityNotFoundException {
         if (!userRepository.existsById(userId)) {
             throw new EntityNotFoundException(USER_DOES_NOT_EXIST);
         }
@@ -94,7 +94,7 @@ public class AccountServiceImpl implements AccountService {
         }
     }
 
-    private void validateUserAndAccount(long userId, long accountId) {
+    private void validateUserAndAccount(long userId, long accountId) throws EntityNotFoundException {
         if (!userRepository.existsById(userId)) {
             throw new EntityNotFoundException(USER_DOES_NOT_EXIST);
         }
