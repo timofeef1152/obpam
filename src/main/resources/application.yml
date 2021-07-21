@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/obpam
+    username: postgres
+    password: mysecretpassword
+    driverClassName: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+
+logging.level.org.spring-framework.web: DEBUG
+logging.level.org.hibernate: DEBUG
+logging.level.com.obpam: INFO
